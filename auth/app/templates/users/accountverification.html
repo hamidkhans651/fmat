@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 16px;
+            max-width: 150px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .button {
+            color: #fff;
+            background-color: #007BFF;
+            border-color: #007BFF;
+            border-radius: .25rem;
+            text-decoration: none;
+            padding: .75rem 1.25rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0 0 10px;
+        }
+        .footer {
+            font-size: 0.875rem;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Inline SVG Logo -->
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#007BFF">
+                <!-- Your SVG content here -->
+                <circle cx="50" cy="50" r="50"/>
+                <text x="50%" y="50%" fill="#fff" font-size="18" font-family="Arial" text-anchor="middle" dy=".3em">{{ application }}</text>
+            </svg>
+        </div>
+        <h1>Welcome to {{ application }}!</h1>
+        <p>Dear {{ username }},</p>
+        <p>Thank you for signing up. Please activate your account by clicking the link below:</p>
+        <p>
+            <a href="{{ url }}" class="button">Activate Account</a>
+        </p>
+        <p>If the button above doesn't work, please copy and paste the following URL into your browser:</p>
+        <p><a href="{{ url }}">{{ url }}</a></p>
+        <p>Thank you for choosing us!</p>
+        <p>Best Regards,<br>{{ application }} Team</p>
+        <div class="footer">
+            <p>If you did not sign up for this account, please ignore this email.</p>
+        </div>
+    </div>
+</body>
+</html>
