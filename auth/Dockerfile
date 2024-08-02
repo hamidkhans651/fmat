@@ -1,6 +1,6 @@
 FROM python:3.12
 
-LABEL Maintainer="iamshoaibxyz@gmail.com"
+LABEL Maintainer="hamid"
 
 # Set the working directory in the container
 WORKDIR /code
