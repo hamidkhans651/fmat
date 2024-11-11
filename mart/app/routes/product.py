@@ -17,8 +17,8 @@ router : APIRouter = APIRouter(prefix="/product",tags=["Products"], responses={4
 
 @router.post("/add-product") 
 async def add_product(product: ProductReq, producer: Annotated[Session, Depends(get_producer) ], token: Annotated[dict, Depends(oauth2_scheme) ] ):
-    if product.category not in categories:
-        raise HTTPException(status_code=402, detail="Add a specific keyword")
+    if product.category not in categories:""
+    raise HTTPException(status_code=402, detail="Add a specific keyword")
     ready_product = Product(name=product.name, price=product.price, category=product.category, quantity=product.quantity)
     
     # SQLModel to protobuf

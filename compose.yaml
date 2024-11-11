@@ -1,4 +1,4 @@
-version: "3.9"
+
 name: "basic-mart"
 services:
 
@@ -16,18 +16,18 @@ services:
       - broker
       - auth
 
-  payments:
-    build:
-      context: ./payments
-      dockerfile: Dockerfile
-    container_name: paymentsCont
-    ports:
-      - "8003:8003"
-    volumes:
-      - "./payments:/code/"   # Volume bind mounting
-    depends_on:
-      - postgres_db
-      - api
+  # payments:
+  #   build:
+  #     context: ./payments
+  #     dockerfile: Dockerfile
+  #   container_name: paymentsCont
+  #   ports:
+  #     - "8003:8003"
+  #   volumes:
+  #     - "./payments:/code/"   # Volume bind mounting
+  #   depends_on:
+  #     - postgres_db
+  #     - api
 
   auth:
     build:
